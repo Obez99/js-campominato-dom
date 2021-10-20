@@ -45,10 +45,23 @@ function cellClick() {
 }
 
 function bombsGenerator(cells) {
-  const bombs = []
-  for (i = 0; i < 16; i++) {
-    bombs[i] = Math.floor(Math.random() * cells + 1);
+  //Creo un array di numeri casuali cioè 16 numeri
+  const bombs = [];
+  let actualBomb = 0;
+  //per 16 volte
+  for (let i = 0; i < 16; i++) {
+    //Genero un numero casuale
+    actualBomb = Math.floor(Math.random() * cells + 1);
+    //Controllo che ci sia già
+    if (bombs.includes(actualBomb)) {
+      i--
+    } else {
+      bombs[i] = actualBomb;
+    }
+
+
   }
+
   bombs.sort((a, b) => a - b)
   return bombs;
 }
