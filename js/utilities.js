@@ -42,12 +42,15 @@ function cellsGenerator() {
 function cellClick() {
   score.innerHTML = ""
 
+  if (this.className === "cell cell_active") {
+    scoreCounter--;
+  }
+
   if (bombs.includes(parseInt(this.innerHTML))) {
     this.classList.add("cell_bomb")
     scoreCounter = 0;
   }
   else {
-
     this.classList.add("cell_active")
     scoreCounter++;
     score.append(scoreCounter)
