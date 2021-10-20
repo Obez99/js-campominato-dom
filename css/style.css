@@ -71,3 +71,11 @@ main{
 .cell_bomb{
   background-color: red;
 }
+
+.score_section{
+  display:flex
+}
+
+#score{
+  margin-left: 10px;
+}

@@ -23,7 +23,6 @@ function cellsCounter(num) {
 //Generare e aggiustare le celle
 function cellsGenerator() {
   gameContainer.innerHTML = "";
-
   //Stampare le celle
   const cellsPerRow = Math.sqrt(cellsCount);
   const cellSize = 100 / cellsPerRow;
@@ -41,15 +40,20 @@ function cellsGenerator() {
 }
 
 function cellClick() {
+  score.innerHTML = ""
 
-  for (let i = 0; i < bombs.length; i++) {
-    if (parseInt(this.innerHTML) === bombs[i]) {
-      this.classList.add("cell_bomb")
-    }
-    else
-      this.classList.add("cell_active")
-
+  if (bombs.includes(parseInt(this.innerHTML))) {
+    this.classList.add("cell_bomb")
+    scoreCounter = 0;
   }
+  else {
+
+    this.classList.add("cell_active")
+    scoreCounter++;
+    score.append(scoreCounter)
+  }
+
+
 
 }
 
