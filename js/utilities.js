@@ -44,12 +44,17 @@ function cellClick() {
   this.classList.toggle("cell_active")
 }
 
-function bombsGenerator(cells) {
+/**
+ * 
+ * @param {*} cells - Cells number given by the game's difficulty.
+ * @param {*} nBombs - Number of bombs to generate. (Default is 16).
+ */
+function bombsGenerator(cells, nBombs = 16) {
   //Creo un array di numeri casuali cioè 16 numeri
   const bombs = [];
   let actualBomb = 0;
   //per 16 volte
-  for (let i = 0; i < 16; i++) {
+  for (let i = 0; i < nBombs; i++) {
     //Genero un numero casuale
     actualBomb = Math.floor(Math.random() * cells + 1);
     //Controllo che ci sia già
@@ -58,8 +63,6 @@ function bombsGenerator(cells) {
     } else {
       bombs[i] = actualBomb;
     }
-
-
   }
 
   bombs.sort((a, b) => a - b)
