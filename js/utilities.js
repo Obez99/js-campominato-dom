@@ -43,3 +43,12 @@ function cellsGenerator() {
 function cellClick() {
   this.classList.toggle("cell_active")
 }
+
+function bombsGenerator(cells) {
+  const bombs = []
+  for (i = 0; i < 16; i++) {
+    bombs[i] = Math.floor(Math.random() * cells + 1);
+  }
+  bombs.sort((a, b) => a - b)
+  return bombs;
+}

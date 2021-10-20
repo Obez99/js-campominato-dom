@@ -11,7 +11,8 @@ playButton.addEventListener("click", function () {
   chosenDifficulty = parseInt(difficultySelector.value);
   cellsCount = cellsCounter(chosenDifficulty);
   cellsGenerator();
-
+  const bombs = bombsGenerator(cellsCount);
+  console.log(bombs);
 })
 
 
