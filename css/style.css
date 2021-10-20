@@ -67,3 +67,7 @@ main{
   background-color: blue;
   color:white
 }
+
+.cell_bomb{
+  background-color: red;
+}

@@ -41,7 +41,13 @@ function cellsGenerator() {
 }
 
 function cellClick() {
-  this.classList.toggle("cell_active")
+
+  for (let i = 0; i < bombs.length; i++) {
+    if (parseInt(this.innerHTML) === bombs[i])
+      console.log("ciao");
+
+  }
+
 }
 
 /**
