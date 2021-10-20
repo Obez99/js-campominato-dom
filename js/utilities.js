@@ -43,8 +43,11 @@ function cellsGenerator() {
 function cellClick() {
 
   for (let i = 0; i < bombs.length; i++) {
-    if (parseInt(this.innerHTML) === bombs[i])
-      console.log("ciao");
+    if (parseInt(this.innerHTML) === bombs[i]) {
+      this.classList.add("cell_bomb")
+    }
+    else
+      this.classList.add("cell_active")
 
   }
 
