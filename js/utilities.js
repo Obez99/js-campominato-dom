@@ -35,6 +35,7 @@ function cellsGenerator() {
     cell.append(i + 1);
     gameContainer.append(cell);
     cell.addEventListener("click", cellClick)
+
   }
 
 }
@@ -49,6 +50,7 @@ function cellClick() {
   if (bombs.includes(parseInt(this.innerHTML))) {
     this.classList.add("cell_bomb")
     scoreCounter = 0;
+
   }
   else {
     this.classList.add("cell_active")

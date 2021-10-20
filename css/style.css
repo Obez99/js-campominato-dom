@@ -53,6 +53,13 @@ main{
   align-items: center;
 }
 
+.game_title{
+  animation-name: test;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate-reverse;
+}
+
 .cell{
   border: 1px solid black;
   background-color: gray;
