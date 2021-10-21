@@ -83,10 +83,10 @@ main{
   background-color: red;
 }
 
-.score_section{
+.score_section, .record_section{
   display:flex
 }
 
-#score{
+#score, #recordScore{
   margin-left: 10px;
 }

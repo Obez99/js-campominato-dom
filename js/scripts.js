@@ -6,9 +6,13 @@ const difficultySelector = document.getElementById("difficultySelector")
 const gameContainer = document.getElementById("gameContainer")
 const mainSection = document.querySelector("main");
 let overlay;
+overlay = document.createElement("div")
 let bombs = [];
 const score = document.getElementById("score")
-let scoreCounter = 0;
+const recordScore = document.getElementById("recordScore")
+let scoreCounter;
+let recordCounter = 0;
+
 
 playButton.addEventListener("click", function () {
   //Cancellare le celle precedenti
@@ -19,7 +23,8 @@ playButton.addEventListener("click", function () {
   cellsCount = cellsCounter(chosenDifficulty);
   bombs = bombsGenerator(cellsCount);
   cellsGenerator();
-  overlay.style.display = ("none")
+  overlay.style.display = ("none");
+
 })
 
 

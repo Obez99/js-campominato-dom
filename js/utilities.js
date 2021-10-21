@@ -49,20 +49,23 @@ function cellClick() {
 
   if (bombs.includes(parseInt(this.innerHTML))) {
     this.classList.add("cell_bomb")
-    scoreCounter = 0;
-    overlay = document.createElement("div")
+    score.append(scoreCounter)
     overlay.style.width = "100%";
     overlay.style.height = "100%";
     overlay.style.display = "block"
     overlay.style.position = "absolute";
     mainSection.append(overlay);
-    score.append("Mi dispiace, hai perso! Premi gioca per riprovare")
   }
 
   else {
     this.classList.add("cell_active")
     scoreCounter++;
     score.append(scoreCounter)
+
+    if (scoreCounter > recordCounter)
+      recordCounter = scoreCounter
+    recordScore.innerHTML = recordCounter;
+
   }
 
 
