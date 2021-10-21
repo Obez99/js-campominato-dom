@@ -12,7 +12,7 @@ playButton.addEventListener("click", function () {
   //Cancellare le celle precedenti
   //Convertire il valore nel numero di celle che dovranno essere stampate
   scoreCounter = 0;
-  score.innerHTML = ""
+  score.innerHTML = "0"
   chosenDifficulty = parseInt(difficultySelector.value);
   cellsCount = cellsCounter(chosenDifficulty);
   bombs = bombsGenerator(cellsCount);

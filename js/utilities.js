@@ -35,10 +35,10 @@ function cellsGenerator() {
     cell.append(i + 1);
     gameContainer.append(cell);
     cell.addEventListener("click", cellClick)
-
   }
 
 }
+
 
 function cellClick() {
   score.innerHTML = ""
@@ -50,8 +50,13 @@ function cellClick() {
   if (bombs.includes(parseInt(this.innerHTML))) {
     this.classList.add("cell_bomb")
     scoreCounter = 0;
-
+    const overlay = document.createElement("div")
+    overlay.style.width = "100%";
+    overlay.style.height = "100%";
+    overlay.style.position = "fixed";
+    gameContainer.append(overlay);
   }
+
   else {
     this.classList.add("cell_active")
     scoreCounter++;

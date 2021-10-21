@@ -51,9 +51,12 @@ main{
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+  background: rgb(48,48,48);
+  background: linear-gradient(25deg, rgba(48,48,48,1) 0%, rgba(149,149,149,1) 100%);
 }
 
 .game_title{
+  color: darkred;
   animation-name: test;
   animation-duration: 2s;
   animation-iteration-count: infinite;
