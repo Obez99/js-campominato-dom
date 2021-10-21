@@ -10,6 +10,7 @@ overlay = document.createElement("div")
 let cell;
 let bombs = [];
 const score = document.getElementById("score")
+const scoreText = document.getElementById("score_text")
 const recordScore = document.getElementById("recordScore")
 let scoreCounter;
 let recordCounter = 0;
@@ -18,6 +19,7 @@ let recordCounter = 0;
 playButton.addEventListener("click", function () {
   //Cancellare le celle precedenti
   //Convertire il valore nel numero di celle che dovranno essere stampate
+  scoreText.innerHTML = "Punteggio:"
   scoreCounter = 0;
   score.innerHTML = "0"
   chosenDifficulty = parseInt(difficultySelector.value);

@@ -58,6 +58,9 @@ function cellClick() {
     overlay.style.position = "absolute";
     mainSection.append(overlay);
 
+
+    score.innerHTML = "Game over. Premi gioca per riprovare.";
+    scoreText.innerHTML = ""
   }
 
   else {
@@ -105,7 +108,7 @@ function bombsGenerator(cells, nBombs = 16) {
 
 function showBombs() {
   const cells = gameContainer.querySelectorAll(".cell");
-  console.log(cells);
+
 
   for (let i = 0; i < bombs.length; i++) {
     const bomb = bombs[i]
