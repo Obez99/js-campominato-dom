@@ -5,6 +5,7 @@ const playButton = document.getElementById("playButton")
 const difficultySelector = document.getElementById("difficultySelector")
 const gameContainer = document.getElementById("gameContainer")
 const mainSection = document.querySelector("main");
+let overlay;
 let bombs = [];
 const score = document.getElementById("score")
 let scoreCounter = 0;
@@ -18,6 +19,7 @@ playButton.addEventListener("click", function () {
   cellsCount = cellsCounter(chosenDifficulty);
   bombs = bombsGenerator(cellsCount);
   cellsGenerator();
+  overlay.style.display = ("none")
 })
 
 

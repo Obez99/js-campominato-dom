@@ -50,11 +50,13 @@ function cellClick() {
   if (bombs.includes(parseInt(this.innerHTML))) {
     this.classList.add("cell_bomb")
     scoreCounter = 0;
-    const overlay = document.createElement("div")
+    overlay = document.createElement("div")
     overlay.style.width = "100%";
     overlay.style.height = "100%";
+    overlay.style.display = "block"
     overlay.style.position = "absolute";
     mainSection.append(overlay);
+    score.append("Mi dispiace, hai perso! Premi gioca per riprovare")
   }
 
   else {
