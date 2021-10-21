@@ -7,6 +7,7 @@ const gameContainer = document.getElementById("gameContainer")
 const mainSection = document.querySelector("main");
 let overlay;
 overlay = document.createElement("div")
+let cell;
 let bombs = [];
 const score = document.getElementById("score")
 const recordScore = document.getElementById("recordScore")

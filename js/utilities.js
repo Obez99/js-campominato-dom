@@ -27,8 +27,9 @@ function cellsGenerator() {
   const cellsPerRow = Math.sqrt(cellsCount);
   const cellSize = 100 / cellsPerRow;
 
+
   for (let i = 0; i < cellsCount; i++) {
-    const cell = document.createElement("div");
+    cell = document.createElement("div");
     cell.classList.add("cell");
     cell.style.width = cellSize + "%";
     cell.style.height = cellSize + "%";
@@ -50,11 +51,13 @@ function cellClick() {
   if (bombs.includes(parseInt(this.innerHTML))) {
     this.classList.add("cell_bomb")
     score.append(scoreCounter)
+    showBombs()
     overlay.style.width = "100%";
     overlay.style.height = "100%";
     overlay.style.display = "block"
     overlay.style.position = "absolute";
     mainSection.append(overlay);
+
   }
 
   else {
@@ -62,9 +65,12 @@ function cellClick() {
     scoreCounter++;
     score.append(scoreCounter)
 
-    if (scoreCounter > recordCounter)
+
+
+    if (scoreCounter > recordCounter) {
       recordCounter = scoreCounter
-    recordScore.innerHTML = recordCounter;
+      recordScore.innerHTML = recordCounter;
+    }
 
   }
 
@@ -95,4 +101,16 @@ function bombsGenerator(cells, nBombs = 16) {
 
   bombs.sort((a, b) => a - b)
   return bombs;
+}
+
+function showBombs() {
+  const cells = gameContainer.querySelectorAll(".cell");
+  console.log(cells);
+
+  for (let i = 0; i < bombs.length; i++) {
+    const bomb = bombs[i]
+    const bombCell = cells[bomb - 1]
+    bombCell.classList.add("cell_bomb")
+  }
+
 }
