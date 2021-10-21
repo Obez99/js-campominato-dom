@@ -53,8 +53,8 @@ function cellClick() {
     const overlay = document.createElement("div")
     overlay.style.width = "100%";
     overlay.style.height = "100%";
-    overlay.style.position = "fixed";
-    gameContainer.append(overlay);
+    overlay.style.position = "absolute";
+    mainSection.append(overlay);
   }
 
   else {

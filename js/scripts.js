@@ -4,6 +4,7 @@
 const playButton = document.getElementById("playButton")
 const difficultySelector = document.getElementById("difficultySelector")
 const gameContainer = document.getElementById("gameContainer")
+const mainSection = document.querySelector("main");
 let bombs = [];
 const score = document.getElementById("score")
 let scoreCounter = 0;
